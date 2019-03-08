@@ -59,9 +59,11 @@ function CheckBill(): boolean {
 }
 function ClearValues() {
     (<HTMLInputElement>inputBill).value = "";
+    (<HTMLInputElement>people).value = "";
     document.getElementById('tipPercent').innerText = "";
     document.getElementById('fullBill').innerText = "";
     document.getElementById('tipSelected').innerText = "";
     document.getElementById('tipAmount').innerText = "";
+    document.getElementById('personPaid').innerText = "";
     document.getElementById('totalPaid').innerText = "";
 }
