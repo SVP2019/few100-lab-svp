@@ -5,6 +5,11 @@ let bill: number;
 inputBill.addEventListener('keyup', function () {
     bill = Number((<HTMLInputElement>document.getElementById('bill')).value);
 })
+const people = document.getElementById("people");
+let persons: number;
+people.addEventListener('keyup', function () {
+    persons = Number((<HTMLInputElement>document.getElementById('people')).value);
+})
 
 const buttons = document.querySelectorAll('.button');
 
@@ -33,6 +38,7 @@ function Calculate(prct: number) {
     document.getElementById('tipSelected').innerText = prct.toString() + '%';
     let tipAmt = bill * prct / 100;
     document.getElementById('tipAmount').innerText = '$' + tipAmt.toFixed(2);
+    document.getElementById('personPaid').innerText = '$' + ((bill + tipAmt) / persons).toFixed(2);
     document.getElementById('totalPaid').innerText = '$' + (bill + tipAmt).toFixed(2);
 }
 function CheckBill(): boolean {
@@ -43,6 +49,11 @@ function CheckBill(): boolean {
         return false;
     } else {
         (<HTMLInputElement>inputBill).classList.remove('error');
+        if (isNaN(persons) || !persons) {
+            alert("Assuming 1 person in the party");
+            (<HTMLInputElement>people).value = "1";
+            persons = 1;
+        }
         return true;
     }
 }

@@ -12,10 +12,10 @@ h1 {
     width: 8%;
     height: 15%;
 }
-table{
+table, tr, td{
     border: 1px solid black;
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
 }
 .bill.error{
     border: 2px solid red;
