@@ -1,3 +1,28 @@
 h1 {
-    color:red;
+    color: darkgoldenrod;
+}
+.dollar{
+    background: lightgray;
+    text-align: left;
+}
+.button{
+    border-radius:15%;
+    transition: background .8s;
+    background: lightyellow;
+    width: 8%;
+    height: 15%;
+}
+table{
+    border: 1px solid black;
+    width: 30%;
+    height: 30%;
+}
+.bill.error{
+    border: 2px solid red;
+}
+.italic{
+    font-style: italic;
+}
+.calculator{
+    padding-left: 10%;
 }
